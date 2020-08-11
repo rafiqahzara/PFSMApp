@@ -1,0 +1,142 @@
+
+<ion-content>
+
+ <ion-card>
+  <ion-card-header>
+    Learn more on a recent two products comparison made by the community.
+    You also can post comparison of your own favourite products.
+  </ion-card-header>
+</ion-card>
+      
+
+
+  <!--
+
+ <ion-searchbar showcancelbutton=""
+      (ionInput)="filterList($event)" placeholder="Search by Type"></ion-searchbar>
+
+
+  <ion-list class="gap">
+    <ion-item>
+    <ion-label><strong>Product Type</strong></ion-label>
+      <ion-select [(ngModel)]="type" 
+      (ionChange)="pickProductType(type)">
+        <ion-chip outline color="secondary">
+      <ion-select-option value="Cleanser">Cleanser</ion-select-option>
+      <ion-select-option value="Moisturizer">Moisturizer</ion-select-option>
+      <ion-select-option value="Toner">Toner</ion-select-option>
+      <ion-select-option value="Sunscreen">Sunscreen</ion-select-option>
+    </ion-chip></ion-select>
+    </ion-item>
+
+</ion-list> 
+
+
+  <div *ngIf = "type">
+  <ion-item [routerLink]="['/add-compare', item.id ]"
+    *ngFor="let item of (products | async)">
+
+    <ng-container *ngIf="item.type === type">
+      <ion-thumbnail>
+          <img src=".././../assets/{{ item.imageURL }}">
+      </ion-thumbnail>
+        <ion-label style="white-space: inherit;">
+          <h3>{{item.name}} {{ item.subname }}</h3>
+        </ion-label>        
+
+    </ng-container> 
+  </ion-item>  
+    
+</div>    
+  -->
+
+
+
+<ion-button expand="block" color="light" 
+(click)="showDetails = !showDetails;">  
+  <ion-label style="font-size: 16px;">
+    View Recent Comparison
+  </ion-label>
+  <ion-icon name="chevron-down-circle-outline" slot="end"></ion-icon>  
+</ion-button>
+
+<div *ngIf="showDetails">
+  <ion-card *ngFor="let com of (compares | async)"
+  [routerLink]="['/view-compare', com.id]">
+  
+    <ng-container *ngFor="let item of (products | async)">
+
+      <ion-item *ngIf="com.prodId === item.id">
+        <ion-avatar slot="end">
+          <img class="img-circle" src=".././../assets/{{ item.imageURL }}">
+        </ion-avatar>
+        <ion-label style="white-space: inherit;">
+          <ion-card-header>
+            <ion-card-title  style="font-size: 12px;">{{ item.type }}</ion-card-title>
+            <ion-card-title  style="font-size: 14px;">{{ item.name }}</ion-card-title>
+            <ion-card-subtitle  style="font-size: 10px;"> {{ item.subname }}</ion-card-subtitle>
+          </ion-card-header>
+        </ion-label>
+      </ion-item>
+
+      <ion-item *ngIf="com.prodId2 === item.id">
+        <ion-avatar slot="end">
+          <img class="img-circle" src=".././../assets/{{ item.imageURL }}">
+        </ion-avatar>
+        <ion-label style="white-space: inherit;">
+          <ion-card-header>
+            <ion-card-title  style="font-size: 12px;">{{ item.type }}</ion-card-title>
+            <ion-card-title  style="font-size: 14px;">{{ item.name }}</ion-card-title>
+            <ion-card-subtitle  style="font-size: 10px;"> {{ item.subname }}</ion-card-subtitle>
+          </ion-card-header>
+        </ion-label>
+      </ion-item>
+
+    </ng-container>
+
+  </ion-card>
+</div>
+
+
+  <ion-list>
+    <ion-list-header style="font-size: 16px;">
+      Add Comparison
+    </ion-list-header>
+    <ion-item>
+      <ion-label color="primary">
+        Choose one product first
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+    <ion-item>
+    <ion-label><strong>Product Type</strong></ion-label>
+      <ion-select (ionChange)="filterList($event)" style="font-size: 12px;">
+      <ion-select-option value="cleanser">Cleanser</ion-select-option>
+      <ion-select-option value="moisturizer">Moisturizer</ion-select-option>
+      <ion-select-option value="toner">Toner</ion-select-option>
+      <ion-select-option value="sunscreen">Sunscreen</ion-select-option>
+    </ion-select>
+    </ion-item>
+
+    <br>
+    
+    <div  style="height: 500px; overflow-y: scroll;">
+    <ion-card [routerLink]="['/add-compare', item.prodId ]"
+    *ngFor="let item of productData">
+        <ion-item>
+      
+            <ion-thumbnail>
+                <img src=".././../assets/{{ item.imageURL }}">
+            </ion-thumbnail>
+              <ion-label style="white-space: inherit;">
+                <h3>{{item.name}} {{ item.subname }}</h3>
+              </ion-label>        
+      
+        </ion-item>       
+
+    </ion-card>
+</div>
+ 
+   
+</ion-content>
