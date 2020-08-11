@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+	<ion-buttons slot="start">
+		<ion-back-button text="" defaultHref="profile"></ion-back-button>
+	  </ion-buttons>
+    <ion-title>Add Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+		<ion-card-header>
+		  <ion-card-subtitle>Hello! {{useremail}}</ion-card-subtitle>
+		</ion-card-header>
+		<ion-card-content>
+    <ion-input type="email" value="useremail" 
+    [(ngModel)]="profile.email"> {{useremail}}</ion-input>
+    <ion-input placeholder="Name" type="text" [(ngModel)]="profile.name"></ion-input>
+		<ion-input placeholder="Age" type="number" [(ngModel)]="profile.age"></ion-input>
+		</ion-card-content>
+    </ion-card>
+
+    <ion-list >
+      <ion-item>
+      <ion-label><strong>Skin Type</strong></ion-label>
+        <ion-select [(ngModel)]="profile.skintype">
+        <ion-select-option value="Dry" >Dry Skin</ion-select-option>
+        <ion-select-option value="Combination" >Combination Skin</ion-select-option>
+        <ion-select-option value="Oily" >Oily Skin</ion-select-option>
+         </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+
+    <ion-radio-group [(ngModel)]="profile.skinconcern">
+      <ion-item>
+        <ion-label><strong>Skin Concern</strong></ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Dryness</ion-label>
+        <ion-radio value="Dryness"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Acne-Scar</ion-label>
+        <ion-radio value="Acne-Scar"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Acne-Prone</ion-label>
+        <ion-radio value="Acne-Prone"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Wrinkles</ion-label>
+        <ion-radio value="Wrinkles"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Oiliness</ion-label>
+        <ion-radio value="Oiliness"></ion-radio>
+      </ion-item>  
+
+</ion-radio-group>
+</ion-list>
+
+
+    <!--tutup kejap
+
+
+    		<ion-input placeholder="Skin Type" type="text" [(ngModel)]="profile.skintype"></ion-input>
+		<ion-input placeholder="Skin Concern" type="text" [(ngModel)]="profile.skinconcern"></ion-input>	
+
+    -->
+</ion-content>
+
+<ion-footer *ngIf="!profile.id">  
+  <ion-toolbar color="success">  
+    <ion-button expand="full" color="light"  fill="clear" (click)="addProfile()">  
+      <ion-icon name="checkmark" slot="start"></ion-icon>  
+      Add Profile  
+    </ion-button>  
+  </ion-toolbar>  
+</ion-footer>  
