@@ -1,0 +1,92 @@
+ <ion-content>
+
+    <ion-segment (ionChange)="filterType($event)">
+      <ion-segment-button 
+      style="font-size: 12px;"
+      value='cleanser'>
+        Cleanser
+      </ion-segment-button>
+
+      <ion-segment-button 
+      style="font-size: 12px;"
+      value='toner'>
+      Toner 
+      </ion-segment-button>
+
+      <ion-segment-button 
+      style="font-size: 12px;"
+      value='moisturizer'>
+        Moisturizer
+      </ion-segment-button>   
+
+      <ion-segment-button 
+      style="font-size: 12px;"
+      value='sunscreen'>
+        Sunscreen
+      </ion-segment-button>      
+    </ion-segment>
+
+
+      <ion-searchbar showcancelbutton=""
+      (ionInput)="filterList($event)" placeholder="Search by Brand"></ion-searchbar>
+
+
+      <ion-card button [routerLink]="['/product-display/', item.prodId]" 
+      *ngFor="let item of productData">
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="9">
+            <div style="text-align: center;">
+            <img width="50" src=".././../assets/{{ item.imageURL }}"/></div>
+          </ion-col>
+          <ion-col size="3">
+            <div class="mlbox">{{ item.size }}<br>ML</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-card-header >
+        <ion-card-subtitle>{{ item.name }}</ion-card-subtitle>
+        <ion-card-title style="font-size: 15px;">{{ item.subname }}</ion-card-title>
+      </ion-card-header>
+
+      <ion-item>
+        <ion-button href="{{ item.urlpage }}" target="_system"
+         fill="outline" slot="end">SHOP ONLINE</ion-button>
+       </ion-item>
+
+       <ion-card-content>
+         <p>Product Type: {{ item.type }}</p>
+         <p>Price: RM {{ item.price }}</p>
+       </ion-card-content>
+   
+      </ion-card>
+
+
+    </ion-content>
+
+    
+<!--<ion-content>
+request.time < timestamp.date(2020, 5, 8
+
+ <ion-card button [routerLink]="['/product-display', item.id ]" 
+ *ngFor="let item of (products | async)">
+  <ion-card-header>
+    <ion-card-subtitle>{{ item.name }}</ion-card-subtitle>
+    <ion-card-title>{{ item.subname }}</ion-card-title>
+  </ion-card-header>
+
+  <ion-item>
+    <ion-button fill="outline" slot="end">BUY IN SHOPEE</ion-button>
+  </ion-item>
+
+  <ion-card-content>
+    <p>Product Type: {{ item.type }}</p>
+    <p>Price: RM {{ item.price }}</p>
+    <p>Size: {{ item.size }}ML</p>
+  </ion-card-content>
+  </ion-card>
+  
+  
+</ion-content>!-->
