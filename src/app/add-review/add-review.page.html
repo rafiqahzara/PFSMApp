@@ -1,0 +1,143 @@
+<ion-header>
+  <ion-toolbar color="primary">
+	<ion-buttons slot="start">
+    <ion-back-button text="" 
+    defaultHref="/reviews"></ion-back-button>
+	  </ion-buttons>
+    <ion-title>Give Review</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col style="padding-top: 25px;" size="4">
+            <img src=".././../assets/{{ products.imageURL }}"/>
+          </ion-col>
+
+          <ion-col size="8">
+            <ion-card-header>
+              <ion-card-subtitle style="font-size: 15px;">{{ products.name }}</ion-card-subtitle>
+              <ion-card-title style="font-size: 15px;">{{ products.subname }}</ion-card-title>
+            </ion-card-header>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+  
+    <ion-item>
+      <ion-button href="{{ products.urlpage }}" target="_system"
+       fill="outline" slot="end">SHOP ONLINE</ion-button>
+     </ion-item>
+  
+    <ion-card-content>
+      <p>Product Type: {{ products.type }}</p>
+      <p>Price: RM {{ products.price }}</p>
+      <p>Size: {{ products.size }}ML</p>
+    </ion-card-content>
+    </ion-card>
+
+    <!--
+
+    <ion-card *ngFor="let pro of (profiles | async)" 
+    style="font-size: 12px; border: 1px solid #c86b98;">
+  
+    <ion-card-header>
+      <ion-card-title style="font-size: 14px;margin-bottom: 10px;">
+        By: {{pro.name}}</ion-card-title>
+
+      <ion-card-subtitle>
+        Skin Type:
+      <ion-input
+      type="text"
+      [(ngModel)]="reviews.skintype"
+      value="{{pro.skintype}}">
+      {{pro.skintype}}</ion-input>
+      </ion-card-subtitle>
+
+      <ion-card-subtitle>
+       Skin Concern:
+       <ion-input
+       type="text"
+       [(ngModel)]="reviews.skinconcern"
+       value="{{pro.skinconcern}}">
+       {{pro.skinconcern}}</ion-input>        
+      </ion-card-subtitle>
+
+        
+    </ion-card-header>
+  </ion-card>
+
+    -->
+
+   <ion-card *ngFor="let pro of (profiles | async)">
+    <ion-card-subtitle> {{reviews.addedAt | date: 'short'}} </ion-card-subtitle>
+
+    <div *ngIf="getSKIN(pro.name, pro.skintype, pro.skinconcern)">
+    <ion-card-header>
+      Name:
+      <ion-input
+      type="text"
+      [(ngModel)]="reviews.name">
+      </ion-input>   
+
+      Skin Type:
+      <ion-input
+      type="text"
+      [(ngModel)]="reviews.skintype">
+      </ion-input>
+
+       Skin Concern:
+       <ion-input
+       type="text"
+       [(ngModel)]="reviews.skinconcern"> 
+      </ion-input>        
+    </ion-card-header>
+    </div>
+      <ion-card-content>
+
+          <ion-input 
+          placeholder="Your thoughts on this product?"
+          type="text"
+          [(ngModel)]="reviews.reviewTitle">
+          </ion-input>
+
+        <ion-textarea
+          placeholder="Deliberate it more please"
+          type="text"
+          [(ngModel)]="reviews.reviewContent">
+        </ion-textarea>
+
+        <ion-input
+        placeholder="Out of 5"
+        type="number"
+        [(ngModel)]="reviews.rating">
+      </ion-input>
+
+      </ion-card-content>
+    </ion-card>
+
+      <ion-button size="small" color="secondary" (click)="addReview()">
+       Post </ion-button>
+
+</ion-content>
+   
+<!--<ion-footer *ngIf="todo.id">  
+  <ion-row no-padding text-center>  
+    <ion-col size="6">  
+      <ion-button expand="block" color="danger" fill="outline" (click)="deleteTodo()">  
+        <ion-icon name="trash" slot="start"></ion-icon>  
+        Delete  
+      </ion-button>  
+    </ion-col>  
+    <ion-col size="6">  
+      <ion-button expand="block" fill="solid" color="success" (click)="updateTodo()">  
+        <ion-icon name="save" slot="start"></ion-icon>  
+        Update  
+      </ion-button>  
+    </ion-col>  
+  </ion-row>  
+</ion-footer>!-->
