@@ -1,0 +1,111 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button text=""  
+      defaultHref="/compare"></ion-back-button>
+		  </ion-buttons>
+    <p style="font-size: 14px; margin-left: 10px;">Post Comparison</p>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-chip color="medium" style="margin: 10px 10px 0 10px;">
+    <ion-label>{{compare.addedAt | date: 'short'}}</ion-label>
+  </ion-chip>
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Product selected</ion-card-subtitle>
+      </ion-card-header>
+    <ion-item >
+      
+      <ion-thumbnail>
+          <img src=".././../assets/{{ pro.imageURL }}">
+      </ion-thumbnail>
+        <ion-label style="white-space: inherit;">
+          <h3>{{pro.name}} {{ pro.subname }}</h3>
+          <p>Product Type: {{ pro.type }} </p> 
+        </ion-label>        
+
+  </ion-item>     
+
+  </ion-card>
+
+  <ion-item>
+    <ion-label style="white-space: inherit;">
+      <h3>Select another {{ pro.type }} product</h3>
+    </ion-label>
+  </ion-item>
+
+  <ion-item style="display: none;">
+    <ion-label><strong>Product Type</strong></ion-label>
+      <ion-select value="{{pro.type}}" (ionChange)="filterList($event)" 
+      style="font-size: 12px;">
+      <ion-select-option value="cleanser">Cleanser</ion-select-option>
+      <ion-select-option value="moisturizer">Moisturizer</ion-select-option>
+      <ion-select-option value="toner">Toner</ion-select-option>
+      <ion-select-option value="sunscreen">Sunscreen</ion-select-option>
+    </ion-select>
+    </ion-item>
+<!--
+  <ion-item>
+    <ion-label>Premios</ion-label>
+    <ion-select [(ngModel)]="compare.prodId2"  (ionChange)="filterList($event)">
+        <ion-select-option 
+        *ngFor="let item of productData" 
+        value="{{item.prodId}}">{{item.name}} {{ item.subname }}</ion-select-option>
+    </ion-select>
+</ion-item>
+        <div *ngIf="pro.type === item.type &&  pro.name !== item.name">
+        </div>
+        <ion-thumbnail>
+          <img src=".././../assets/{{ item.imageURL }}">
+      </ion-thumbnail>
+
+            <ion-item *ngFor="let item of productData">
+
+-->
+
+<div *ngIf="pro.type">
+<ion-list>
+    <ion-radio-group [(ngModel)]="compare.prodId2">
+      <ion-item *ngFor="let item of productData">
+
+        <div *ngIf="pro.subname !== item.subname">
+
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src=".././../assets/{{ item.imageURL }}">
+            </ion-avatar>
+            <ion-label style="white-space: inherit;
+            font-size: 12px;">{{item.name}} {{ item.subname }}
+            </ion-label>          
+          </ion-item>
+        </div>
+
+
+        <ion-radio slot="start" value="{{item.prodId}}"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+  </ion-list>  
+</div>
+  
+  
+
+    
+    
+
+  <ion-footer 
+  style="background-color: white;">  
+    <ion-button expand="block" color="secondary" (click)="addCompare()">  
+      Add compare  
+    </ion-button>  
+</ion-footer>  
+
+ 
+
+</ion-content>
+
