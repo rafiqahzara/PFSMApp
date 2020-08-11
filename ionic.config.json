@@ -1,0 +1,9 @@
+{
+  "name": "PFSMApp",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "6a600e8f"
+}
