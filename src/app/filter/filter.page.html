@@ -1,0 +1,332 @@
+<ion-content padding>
+
+  <ion-card *ngFor="let pro of (profiles | async)">
+    <div *ngIf="pro.id">
+
+      <ion-card-header>
+        {{pro.name}} Skin Profile <br>
+        <ion-chip style="font-size: 12px;" color="secondary">
+          <ion-label>{{pro.skintype}}</ion-label>
+        </ion-chip>
+
+        <ion-chip style="font-size: 12px;" color="secondary">
+          <ion-label>{{pro.skinconcern}}</ion-label>
+        </ion-chip>
+
+        <ion-card-title  style="font-size: 14px; padding-top: 5px;">
+          You may like</ion-card-title>
+        </ion-card-header>
+
+     <ion-card-content style="height: 140px; overflow-y: scroll;
+     padding: 0 10px 10px;">
+      <ng-container *ngFor="let item of (products | async)">
+        <div *ngIf="pro.skintype === item.skintype && 
+        checkSkinConcern(pro.skinconcern, item.skinconcern)">
+
+          <ion-chip [routerLink]="['/product-display', item.id ]">
+            <ion-avatar>
+              <img src=".././../assets/{{ item.imageURL }}">
+            </ion-avatar>
+            <ion-label style="font-size: 10px;">
+              {{ item.name }} {{ item.subname }}</ion-label>
+          </ion-chip>
+
+      </div>
+      </ng-container>
+    </ion-card-content>
+
+     </div> 
+   
+    </ion-card>
+
+
+
+<!--
+<ion-list class="gap">
+    <ion-item>
+    <ion-label><strong>Product Type</strong></ion-label>
+      <ion-select class="chip" [(ngModel)]="type" 
+      (ionChange)="pickProductType(type)">
+        <ion-chip outline color="secondary">
+      <ion-select-option value="Cleanser">Cleanser</ion-select-option>
+      <ion-select-option value="Moisturizer">Moisturizer</ion-select-option>
+      <ion-select-option value="Toner">Toner</ion-select-option>
+      <ion-select-option value="Sunscreen">Sunscreen</ion-select-option>
+    </ion-chip></ion-select>
+    </ion-item>
+
+</ion-list> 
+
+ <ion-list class="gap">
+  <ion-item>
+  <ion-label><strong>Skin Type</strong></ion-label>
+    <ion-select class="chip" [(ngModel)]="skintype"
+    (ionChange)="pickSkinType(skintype, value)">
+    <ion-select-option value="Dry" >Dry Skin</ion-select-option>
+    <ion-select-option value="Combination" >Combination Skin</ion-select-option>
+    <ion-select-option value="Oily" >Oily Skin</ion-select-option>
+     </ion-select>
+  </ion-item>
+</ion-list>
+
+
+<ion-card *ngFor="let item of (products | async)" button [routerLink]="['/product-display', item.id ]">
+
+  <div *ngIf="item.type === type && pickSkinType(item.skintype, skintype)">
+    <ion-item>
+          <ion-avatar slot="start">
+            <img class="img-circle" src=".././../assets/{{ item.imageURL }}">
+          </ion-avatar>
+          <ion-label style="white-space: inherit;">
+            <ion-card-header >
+              <ion-card-subtitle>{{ item.name }} 
+                <div class="mlbox">{{ item.size }}<br>ML</div>
+              </ion-card-subtitle>
+              <ion-card-title style="font-size: 15px;">{{ item.subname }}</ion-card-title>
+            </ion-card-header>
+          </ion-label>
+        </ion-item> 
+     
+       <ion-card-content>
+         <p>Product Type: {{ item.type }}</p>
+         <p>For Skin Type: {{ item.skintype }}</p>
+         <p>Skin Concern: {{ item.skinconcern }}</p>
+       </ion-card-content>
+    </div>
+
+</ion-card>
+-->
+
+<!--
+  <ion-text>
+  <img src="../../assets/logo-pfs.png" width="60" style="border-radius: 10px; margin: 10px 0 10px 20px;">
+  <h6 style="margin: 0 20px;">
+    We help you find the most suitable product for your skin. 
+    For beginners we suggest you filter the product based on your skin situation
+  </h6>
+</ion-text>
+-->
+
+
+<ion-card>
+  <ion-card-header>
+    Ingredients in skincare do have it benefits. Find out which ingredient can give you a better results.
+</ion-card-header>
+
+<ion-card-content>
+<ion-button style="float: right;"
+size="small" color="secondary"
+routerLink="/ingredients">Learn more</ion-button>
+</ion-card-content>
+<br><br>
+
+</ion-card>
+
+<form [formGroup]="qsForm">
+  <ion-list>
+    <div formArrayName="quests">
+      <div *ngFor="let qs of qsForm.get('quests')['controls']; let i=index" [formGroupName]="i">
+        <ion-radio-group formControlName="choice">
+
+
+          <ion-list-header>
+            <ion-label style="font-size: 20px;">{{qs.controls.question.value}}</ion-label>
+          </ion-list-header>
+
+
+          <ion-item>
+            <ion-label style="font-size: 14px;">{{qs.controls.choice1.value}}</ion-label>
+            <ion-radio slot="start" [value]="qs.controls.choice1.value"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label style="font-size: 14px;">{{qs.controls.choice2.value}}</ion-label>
+            <ion-radio slot="start" [value]="qs.controls.choice2.value"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label style="font-size: 14px;">{{qs.controls.choice3.value}}</ion-label>
+            <ion-radio slot="start" [value]="qs.controls.choice3.value"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label style="font-size: 14px;">{{qs.controls.choice4.value}}</ion-label>
+            <ion-radio slot="start" [value]="qs.controls.choice4.value"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </div>
+    </div>
+   
+    <div formArrayName="quests2">
+      <div *ngFor="let qs2 of qsForm.get('quests2')['controls']; let j=index;" [formGroupName]="j">
+        <ion-radio-group>
+          <ion-list-header>
+            <ion-label style="font-size: 20px;">{{qs2.controls.question.value}}</ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label style="font-size: 14px;">{{qs2.controls.choice1.value}}</ion-label>
+            <ion-checkbox slot="start" [value]="qs2.controls.choice1.value" 
+            (click)="selectCheckedSKIN(j, qs2.controls.choice1.value)"></ion-checkbox>
+          </ion-item>
+          <ion-item>
+            <ion-label style="font-size: 14px;">{{qs2.controls.choice2.value}}</ion-label>
+            <ion-checkbox slot="start" [value]="qs2.controls.choice2.value" (click)="selectCheckedSKIN(j, qs2.controls.choice2.value)"></ion-checkbox>
+          </ion-item>
+          <ion-item>
+            <ion-label style="font-size: 14px;">{{qs2.controls.choice3.value}}</ion-label>
+            <ion-checkbox slot="start" [value]="qs2.controls.choice3.value" (click)="selectCheckedSKIN(j, qs2.controls.choice3.value)"></ion-checkbox>
+          </ion-item>
+          <ion-item>
+            <ion-label style="font-size: 14px;">{{qs2.controls.choice4.value}}</ion-label>
+            <ion-checkbox slot="start" [value]="qs2.controls.choice4.value" (click)="selectCheckedSKIN(j, qs2.controls.choice4.value)"></ion-checkbox>
+          </ion-item>
+          <ion-item>
+            <ion-label style="font-size: 14px;">{{qs2.controls.choice5.value}}</ion-label>
+            <ion-checkbox slot="start" [value]="qs2.controls.choice5.value" (click)="selectCheckedSKIN(j, qs2.controls.choice5.value)"></ion-checkbox>
+          </ion-item>
+        </ion-radio-group>
+      </div>
+    </div>
+
+<br><br>
+
+    <ion-button expand="block" color="light" 
+    (click)="showDetails = !showDetails;">  
+      <ion-label style="font-size: 20px;">Ingredient Preference</ion-label>
+      <ion-icon name="arrow-down" slot="end"></ion-icon>  
+    </ion-button> 
+
+
+    <div *ngIf="showDetails">
+
+      <ion-card>
+    <ion-card-header>
+      Each ingredient with color coded benefits to make your life easier
+    </ion-card-header>
+    
+    <ion-card-content>
+    
+      <ion-chip style="font-size: 12px;" color="medium">
+        <ion-label>Hydration</ion-label>
+      </ion-chip>
+    
+      <ion-chip style="font-size: 12px;" color="success">
+        <ion-label>Brightening</ion-label>
+      </ion-chip>
+    
+      <ion-chip style="font-size: 12px;" color="warning">
+        <ion-label>Anti-Aging</ion-label>
+      </ion-chip>
+    
+      <ion-chip style="font-size: 12px;" color="danger">
+        <ion-label>Acne-Fighting</ion-label>
+      </ion-chip>
+    
+      <ion-chip style="font-size: 12px;" color="danger">
+        <ion-label>Promote Wound Healing</ion-label>
+      </ion-chip>
+    </ion-card-content>
+    
+    </ion-card>
+
+    <div formArrayName="quests3">
+      <div *ngFor="let qs3 of qsForm.get('quests3')['controls']; let k=index;" [formGroupName]="k">
+        <ion-radio-group>
+          <ion-item>
+            <ion-label style="font-size: 14px;">{{qs3.controls.choice1.value}}</ion-label>
+            <ion-checkbox slot="start" [value]="qs3.controls.choice1.value" 
+            (click)="selectChecked(k, qs3.controls.choice1.value)"></ion-checkbox>
+            <ion-icon color="medium" style="font-size: 15px;" name="radio-button-off-outline"></ion-icon>
+          </ion-item>
+
+          <ion-item>
+            <ion-label style="font-size: 14px;">{{qs3.controls.choice2.value}}</ion-label>
+            <ion-checkbox slot="start" [value]="qs3.controls.choice2.value" (click)="selectChecked(k, qs3.controls.choice2.value)"></ion-checkbox>            
+            <ion-icon color="warning" style="font-size: 15px;" name="radio-button-off-outline"></ion-icon>        
+          </ion-item>
+
+          <ion-item>
+            <ion-label style="font-size: 14px;">{{qs3.controls.choice3.value}}</ion-label>
+            <ion-checkbox slot="start" [value]="qs3.controls.choice3.value" (click)="selectChecked(k, qs3.controls.choice3.value)"></ion-checkbox>
+            <ion-icon color="medium" style="font-size: 15px;" name="radio-button-off-outline"></ion-icon>
+          </ion-item>
+
+          <ion-item>
+            <ion-label style="font-size: 14px;">{{qs3.controls.choice4.value}}</ion-label>
+            <ion-checkbox slot="start" [value]="qs3.controls.choice4.value" (click)="selectChecked(k, qs3.controls.choice4.value)"></ion-checkbox>
+            <ion-icon color="danger" style="font-size: 15px;" name="radio-button-off-outline"></ion-icon>
+          </ion-item>
+
+          <ion-item>
+            <ion-label style="font-size: 14px;">{{qs3.controls.choice5.value}}</ion-label>
+            <ion-checkbox slot="start" [value]="qs3.controls.choice5.value" (click)="selectChecked(k, qs3.controls.choice5.value)"></ion-checkbox>
+            <ion-icon color="success" style="font-size: 15px;" name="radio-button-off-outline"></ion-icon>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label style="font-size: 14px;">{{qs3.controls.choice6.value}}</ion-label>
+            <ion-checkbox slot="start" [value]="qs3.controls.choice6.value" (click)="selectChecked(k, qs3.controls.choice6.value)"></ion-checkbox>
+            <ion-icon color="warning" style="font-size: 15px;" name="radio-button-off-outline"></ion-icon>        
+          </ion-item>
+
+          <ion-item>
+            <ion-label style="font-size: 14px;">{{qs3.controls.choice7.value}}</ion-label>
+            <ion-checkbox slot="start" [value]="qs3.controls.choice7.value" (click)="selectChecked(k, qs3.controls.choice7.value)"></ion-checkbox>
+            <ion-icon color="danger" style="font-size: 15px;" name="radio-button-off-outline"></ion-icon>          
+          </ion-item>
+
+          <ion-item>
+            <ion-label style="font-size: 14px;">{{qs3.controls.choice8.value}}</ion-label>
+            <ion-checkbox slot="start" [value]="qs3.controls.choice8.value" (click)="selectChecked(k, qs3.controls.choice8.value)"></ion-checkbox>
+            <ion-icon color="danger" style="font-size: 15px;" name="radio-button-off-outline"></ion-icon>          
+
+          </ion-item>
+
+          <ion-item>
+            <ion-label style="font-size: 14px;">{{qs3.controls.choice9.value}}</ion-label>
+            <ion-checkbox slot="start" [value]="qs3.controls.choice9.value" (click)="selectChecked(k, qs3.controls.choice9.value)"></ion-checkbox>
+            <ion-icon color="warning" style="font-size: 15px;" name="radio-button-off-outline"></ion-icon>        
+
+          </ion-item>
+
+          <ion-item>
+            <ion-label style="font-size: 14px;">{{qs3.controls.choice10.value}}</ion-label>
+            <ion-checkbox slot="start" [value]="qs3.controls.choice10.value" (click)="selectChecked(k, qs3.controls.choice10.value)"></ion-checkbox>
+            <ion-icon color="danger" style="font-size: 15px;" name="radio-button-off-outline"></ion-icon>          
+
+          </ion-item>
+  
+          <ion-item>
+            <ion-label style="font-size: 14px;">{{qs3.controls.choice11.value}}</ion-label>
+            <ion-checkbox slot="start" [value]="qs3.controls.choice11.value" (click)="selectChecked(k, qs3.controls.choice11.value)"></ion-checkbox>
+            <ion-icon color="warning" style="font-size: 15px;" name="radio-button-off-outline"></ion-icon>        
+
+          </ion-item>
+
+          <ion-item>
+            <ion-label style="font-size: 14px;">{{qs3.controls.choice12.value}}</ion-label>
+            <ion-checkbox slot="start" [value]="qs3.controls.choice12.value" (click)="selectChecked(k, qs3.controls.choice12.value)"></ion-checkbox>
+            <ion-icon color="danger" style="font-size: 15px;" name="radio-button-off-outline"></ion-icon>          
+
+          </ion-item>
+
+  
+        </ion-radio-group>
+      </div>
+    </div>
+    
+</div>   
+    <ion-button expand="block" style="margin: 20px;"
+       class="submit-button" (click)="onSubmit()">Apply Filter</ion-button>
+  
+
+
+
+  </ion-list>
+</form>
+
+
+ <!--
+<ion-button expand="small" style="margin: 20px;"
+vertical="bottom" horizontal="end" slot="fixed"
+class="submit-button" (click)="onSubmit()">Apply Filter</ion-button>
+  -->
+</ion-content>
