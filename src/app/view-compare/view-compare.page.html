@@ -1,0 +1,134 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button text=""  
+      defaultHref="/compare"></ion-back-button>
+		  </ion-buttons>
+    <p style="font-size: 14px; margin-left: 10px;">Comparison</p>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+        Find out which one is more suitable for you
+    </ion-card-header>
+  </ion-card>
+
+  <!--  -->
+  <ion-card *ngFor="let item of (products | async)"
+  [routerLink]="['/product-display/', item.id]">
+
+    <div *ngIf="item.id === compare.prodId">          
+    <ion-card-header><ion-card-subtitle>
+        {{item.name}} {{ item.subname }}
+    </ion-card-subtitle></ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item>
+        <ion-label style="white-space: inherit;">
+          <h3>Skin Type</h3>
+          <p>{{ item.skintype }}</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label style="white-space: inherit;">
+          <h3>Skin Concern</h3>
+          <p>{{ item.skinconcern }}</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label style="white-space: inherit;">
+          <h3>Brightening</h3>
+          <p>{{ item.Brightening }}</p>
+        </ion-label>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label style="white-space: inherit;">
+          <h3>Anti-Aging</h3>
+          <p>{{ item.AntiAging }}</p>
+        </ion-label>        
+      </ion-item>
+
+      <ion-item>
+        <ion-label style="white-space: inherit;">
+          <h3>Promotes Wound Healing</h3>
+          <p>{{ item.PWH }}</p>
+        </ion-label>        
+      </ion-item>
+
+      <ion-item>
+        <ion-label style="white-space: inherit;">
+          <h3>Acne-Fighting</h3>
+          <p>{{ item.AcneFighting }}</p>
+        </ion-label>        
+      </ion-item>
+
+    </ion-card-content>
+    </div>
+
+    <div *ngIf="item.id === compare.prodId2">          
+    <ion-card-header><ion-card-subtitle>
+        {{item.name}} {{ item.subname }}
+    </ion-card-subtitle></ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item>
+        <ion-label style="white-space: inherit;">
+          <h3>Skin Type</h3>
+          <p>{{ item.skintype }}</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label style="white-space: inherit;">
+          <h3>Skin Concern</h3>
+          <p>{{ item.skinconcern }}</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label style="white-space: inherit;">
+          <h3>Brightening</h3>
+          <p>{{ item.Brightening }}</p>
+        </ion-label>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label style="white-space: inherit;">
+          <h3>Anti-Aging</h3>
+          <p>{{ item.AntiAging }}</p>
+        </ion-label>        
+      </ion-item>
+
+      <ion-item>
+        <ion-label style="white-space: inherit;">
+          <h3>Promotes Wound Healing</h3>
+          <p>{{ item.PWH }}</p>
+        </ion-label>        
+      </ion-item>
+
+      <ion-item>
+        <ion-label style="white-space: inherit;">
+          <h3>Acne-Fighting</h3>
+          <p>{{ item.AcneFighting }}</p>
+        </ion-label>        
+      </ion-item>
+
+    </ion-card-content>
+    </div>
+
+  </ion-card>    
+
+
+
+
+
+
+</ion-content>
