@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>All Reviews</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding> 
+
+  <ion-searchbar showcancelbutton=""
+      (ionInput)="filterList($event)" placeholder="Search by Brand"></ion-searchbar>
+
+
+
+    <ion-card *ngFor="let item of productData">
+
+      
+  <ion-item>
+    <ion-avatar slot="start">
+      <img class="img-circle" src=".././../assets/{{ item.imageURL }}">
+    </ion-avatar>
+    <ion-label style="white-space: inherit;">
+      <ion-card-header>
+        <ion-card-title  style="font-size: 12px;">{{ item.name }}</ion-card-title>
+        <ion-card-subtitle  style="font-size: 10px;"> {{ item.subname }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-button style="float: right; margin: 10px;"
+      size="small" color="secondary" 
+      [routerLink]="['/add-review', item.prodId ]">
+        Post Review</ion-button>
+    </ion-label>
+    
+  </ion-item>
+ 
+
+
+    <ion-card-content 
+    style="border-bottom: 1px solid #eeeeee; border-radius: 5px; margin: 5px; padding: 0 10px;"
+    *ngFor="let rev of (reviews | async)">
+
+    <div *ngIf= "rev.prodId === item.prodId"> 
+       <p class="text-secondary">{{ rev.addedAt | date: 'short' }}</p>
+      <p><b>{{ rev.reviewTitle }}</b></p>
+      <p>{{ rev.reviewContent }}</p>
+      <p>Rating: <span style="font-size: 20px; font-weight: bold;">{{ rev.rating }}</span>/
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon> 
+      </p>
+ 
+          <p class="text-secondary">by: <b>{{ rev.name }}</b> 
+            | skin type: <b>{{ rev.skintype }}</b></p>
+          <p class="text-secondary">skin concern: <b>{{ rev.skinconcern }}</b></p>
+   </div>
+
+       </ion-card-content>
+
+
+
+
+    </ion-card>
+
+  
+    <!--<ion-card button [routerLink]="['/add-review', rev.prodId ]"
+    *ngFor="let rev of (reviews | async)">
+    <p>{{ rev.reviewTitle }}</p>
+    <p>{{ rev.reviewContent }}</p>
+    <p>{{ rev.rating }}</p>
+    </ion-card >
+      <p style="color: #c86b98; font-weight:800">By: {{useremail}}</p>!-->
+
+
+    
+
+    <!-- <ion-fab vertical="bottom" horizontal="end" slot="fixed">  
+      <ion-fab-button routerLink="/add-review">  
+        <ion-icon name="add"></ion-icon>  
+      </ion-fab-button>  
+    </ion-fab>     
+
+    <ion-card button [routerLink]="['./add-review', rev.id]"
+    *ngFor="let rev of (reviews | async)">
+      <ion-card-header>
+        <ion-card-subtitle>{{rev.reviewTitle}}</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <p>{{rev.rating}} / 10</p>
+        <p>{{rev.reviewContent}}</p>
+      </ion-card-content>
+  
+      </ion-card>!-->
+
+
+
+
+      
+</ion-content>
