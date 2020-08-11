@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar color="primary">
+	<ion-buttons slot="start">
+    <ion-back-button text="" 
+    defaultHref="/profile"></ion-back-button>
+	  </ion-buttons>
+    <ion-title>Edit Review</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+   <ion-card *ngFor="let item of (products | async)"> 
+     <div *ngIf= "reviews.prodId === item.id"> 
+    <ion-card-header>
+          <ion-card-title  style="font-size: 12px;">Product: {{ item.name }}</ion-card-title>
+          <ion-card-subtitle  style="font-size: 10px;"> {{ item.subname }}</ion-card-subtitle>
+
+      <ion-card-subtitle> {{reviews.addedAt | date: 'short'}} </ion-card-subtitle>
+        <ion-card-subtitle>
+          <ion-input
+          placeholder="Your thoughts on this product?"
+          type="text"
+          [(ngModel)]="reviews.reviewTitle">
+          </ion-input>
+        </ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-textarea
+          placeholder="Deliberate it more please"
+          type="text"
+          [(ngModel)]="reviews.reviewContent">
+        </ion-textarea>
+
+        <ion-input
+        placeholder="Out of 5"
+        type="number"
+        [(ngModel)]="reviews.rating">
+      </ion-input>
+
+      </ion-card-content>
+      </div>
+    </ion-card>
+
+  </ion-content>
+
+  <ion-footer *ngIf="reviews.id" style="background-color: white;">  
+  
+    <ion-row no-padding text-center>  
+      <ion-col size="6">  
+        <ion-button expand="block" color="danger" fill="outline" (click)="deleteReview()">  
+          <ion-icon name="trash" slot="start"></ion-icon>  
+          Delete  
+        </ion-button>  
+      </ion-col>  
+      <ion-col size="6">  
+        <ion-button expand="block" fill="outline" color="success" (click)="updateReview()">  
+          <ion-icon name="save" slot="start"></ion-icon>  
+          Update  
+        </ion-button>  
+      </ion-col>  
+    </ion-row>  
+</ion-footer>  
