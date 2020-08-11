@@ -1,0 +1,95 @@
+<ion-header>
+	<ion-toolbar>
+	  <ion-title>User Profile</ion-title>
+	</ion-toolbar>
+  </ion-header>
+  
+<ion-content padding>
+
+
+	<ion-card style="border: 1px solid #c86b98;" button routerLink="/addprofile">
+		<ion-card-header>
+		<ion-card-title style="font-size: 14px;"> 
+			Hello! {{useremail}}	
+			</ion-card-title>
+		</ion-card-header>
+	</ion-card> 
+
+	  <ion-card button [routerLink]="['/edit-profile', pro.id]"
+	  *ngFor="let pro of (profiles | async)">
+
+		<ion-card-header>
+		<ion-card-title style="font-size: 15px; margin-bottom: 5px;">{{ pro.name }}</ion-card-title>
+		<ion-card-subtitle>{{useremail}}</ion-card-subtitle>
+		</ion-card-header>
+
+		<ion-card-content>
+			<p>Age: {{pro.age}}</p>
+			<p>Skin Type: {{pro.skintype}}</p>
+			<p>Skin Concern: {{pro.skinconcern}}</p>	
+		</ion-card-content>
+
+		</ion-card>
+
+
+	  <ion-list>
+		  <ion-item>
+			<ion-label><strong>All your reviews
+			</strong></ion-label>
+		  </ion-item>
+	  </ion-list>
+
+	  <ion-card *ngFor="let rev of (reviews | async)" [routerLink]="['/review-display', rev.id]">
+		<div *ngIf= "rev.email === useremail">
+		<ion-card-content>
+			  <ng-container *ngFor="let item of (products | async)">
+				  <div *ngIf= "rev.prodId === item.id">
+					<ion-card-title  style="font-size: 12px;">{{ item.name }}</ion-card-title>
+					<ion-card-subtitle  style="font-size: 10px;"> {{ item.subname }}</ion-card-subtitle>
+					<p><b>{{ rev.reviewTitle }}</b></p>
+					<p>{{ rev.reviewContent }}</p>
+					<p>Rating: <span style="font-size: 20px; font-weight: bold;">{{ rev.rating }}</span>/
+						<ion-icon name="star"></ion-icon>
+						<ion-icon name="star"></ion-icon>
+						<ion-icon name="star"></ion-icon>
+						<ion-icon name="star"></ion-icon>
+						<ion-icon name="star"></ion-icon> 
+					  </p>
+				  </div>
+			  </ng-container>				  
+		  </ion-card-content>
+		  </div>
+	  </ion-card>
+
+	  <!--
+	  <ion-card *ngFor="let rev of (reviews | async)"
+	  [routerLink]="['/review-display', rev.id]">
+		<ng-container *ngFor="let pro of (profiles | async)">	
+	<div *ngIf= "pro.id === rev.profid"> 
+		<ion-card-header *ngFor="let item of (products | async)">
+		<div *ngIf= "rev.prodId === item.id"> 
+			<ion-card-title  style="font-size: 12px;">{{ item.name }}</ion-card-title>
+			<ion-card-subtitle  style="font-size: 10px;"> {{ item.subname }}</ion-card-subtitle>
+		</div>
+		</ion-card-header>
+
+		<ion-card-content>
+			<p><b>{{ rev.reviewTitle }}</b></p>
+			<p>{{ rev.reviewContent }}</p>
+			<p>Rating: <span style="font-size: 20px; font-weight: bold;">{{ rev.rating }}</span>/
+				<ion-icon name="star"></ion-icon>
+				<ion-icon name="star"></ion-icon>
+				<ion-icon name="star"></ion-icon>
+				<ion-icon name="star"></ion-icon>
+				<ion-icon name="star"></ion-icon> 
+			  </p>		</ion-card-content>
+		</div>		
+</ng-container>
+	  </ion-card>		  
+	  -->
+
+
+
+			
+  </ion-content>
+  
