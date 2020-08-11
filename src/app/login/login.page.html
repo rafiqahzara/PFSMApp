@@ -1,0 +1,48 @@
+<ion-header>
+	<ion-toolbar color="primary">
+    <ion-title>Login</ion-title>
+	</ion-toolbar>
+  </ion-header>
+
+  <ion-content padding>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>enter your details</ion-card-subtitle>
+        <ion-card-title>Login</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form class="form" [formGroup]="validations_form" 
+        (ngSubmit)="loginUser(validations_form.value)">
+          <ion-item>
+            <ion-label position="floating" color="primary">Email </ion-label>
+            <ion-input type="text" formControlName="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating" color="primary">Password</ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+          </ion-item>
+  
+          <ion-button size="small" style="margin: 10px;" class="submit-btn" type="submit" 
+          [disabled]="!validations_form.valid">Log In</ion-button>
+          <label class="error-message"> {{errorMessage}} </label>
+        </form>
+        <p> 
+          No account yet?<a routerLink="/register"> sign up </a>
+        </p>  
+      </ion-card-content>
+    </ion-card>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col style="text-align: center">
+          <ion-button size="small" 
+          style="float: right; margin: 10px;" 
+          (click) = "dismissLogin()"
+          >
+            &nbsp;or Skip
+            <ion-icon expand="block" slot="icon-only" name="arrow-forward-outline"></ion-icon>
+            </ion-button>
+        </ion-col>
+    </ion-row>    
+    </ion-grid>
+</ion-content>
