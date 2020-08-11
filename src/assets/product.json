@@ -1,0 +1,507 @@
+
+{
+  "products": [
+    {
+      "type": "Toner",
+      "name" : "Hada Labo",
+      "subname" : "Premium Whitening Lotion (Light)",
+      "price" : 60.0,
+      "size" : 170,
+      "skintype": "Dry",
+      "skinconcern": ["Dryness", "AcneScar", "Wrinkles"],
+
+      "imageURL": "hdpremiumlight.jpg", 
+      "urlpage": "https://www.watsons.com.my/premium-whitening-lotion-(light)-170ml/p/BP_79892?text=&page=0",
+      
+      "Brightening": [ "Magnesium Ascorbyl Phosphate", "Tranexamic Acid" ],
+      "AntiAging": ["Magnesium Ascorbyl Phosphate", "Vitamin E", "Citric Acid"],
+      "PWH":["Sodium Hyaluronate", "Hyaluronic Acid"],
+
+      "allIngredient": ["Water", "Glycerin", "Dipropylene Glycol", 
+        "Tranexamic Acid", "Butylene Glycol", "Diglycerin", "PEG-8", "PEG-6", "PEG-32",
+        "Methylparaben", "Polysorbate 20", "Styrene/ VP Copolymer", 
+        "Hydrolyzed Hyaluronic Acid", "Hydroxylated Lecithin", 
+        "Citric Acid", "Tocopherol", "Magnesium Ascorbyl Phosphate", 
+        "Sodium Hyaluronate", "Sorbic Acid"],
+
+      "filter":["SodiumHyaluronate", "TranexamicAcid", "VitaminE", "HyaluronicAcid" ]
+        
+    },
+
+    {
+      "type": "Toner",
+      "name" : "SOME BY MI",
+      "subname" : "30 Days Miracle Toner",
+      "price" : 59.0,
+      "size" : 150,
+      "skintype": "Combination",
+      "skinconcern": ["AcneProne", "AcneScar"],
+
+      "imageURL": "sbm30.jpg", 
+      "urlpage": "https://www.watsons.com.my/some-by-mi-miracle-toner-150ml/p/BP_79394",
+
+      
+      "Brightening": [ "Niacinamide" ],
+      "AntiAging": ["Niacinamide", "Lactobionic Acid", "Adenosine", "Citric Acid"],
+      "PWH":["Sodium Hyaluronate", "Hyaluronic Acid"],
+      "AcneFighting": ["Salicylic Acid"],
+
+      "allIngredient": ["Water","Butylene Glycol","Dipropylene Glycol","Glycerin",
+        "Niacinamide","Melaleuca Alternifolia (Tea Tree) Leaf Extract","Polyglyceryl-4 Caprate",
+        "Carica Papaya (Papaya) Fruit Extract","Lens Esculenta (Lentil) Seed Extract",
+        "Hamamelis Virginiana (Witch Hazel) Extract","Nelumbo Nucifera Flower Extract",
+        "Swiftlet Nest Extract","Sodium Hyaluronate","Fructan","Allantoin","Adenosine",
+        "Hydroxyethyl Urea","Xylitol","Salicylic Acid","Lactobionic Acid",
+        "Citric Acid","Sodium Citrate","1,2-Hexanediol","Benzyl Glycol","Ethylhexylglycerin",
+        "Raspberry Ketone","Mentha Piperita (Peppermint) Oil"],
+
+        "filter": [ "SodiumHyaluronate", "Niacinamide", "Adenosine", "HyaluronicAcid", "SalicylicAcid" ]  
+    },
+
+    {
+      "type": "Toner",
+      "name" : "Klairs",
+      "subname" : "Supple Preparation Unscented Facial Toner",
+      "price" : 68.0,
+      "size" : 180,
+      "skintype": "Oily",
+      "skinconcern": ["Oiliness", "AcneProne", "Wrinkles"],
+
+      "imageURL": "klairs.jpg", 
+      "urlpage": "https://www.lazada.com.my/products/klairs-supple-preparation-unscented-toner-180ml-i999234830-s2645016095.html?spm=a2o4k.searchlist.list.37.83584d3d1rPjkm&search=1",
+
+      
+      "Brightening": [ "Licorice" ],
+      "AntiAging": ["Vitamin E"],
+      "PWH":["Sodium Hyaluronate", "Panthenol", "Centella Asiatica Extract"],
+      "AcneFighting": ["Licorice"],
+
+      "allIngredient":"Water, Butylene Glycol, Dimethyl Sulfone, Betaine, Caprylic/Capric Triglyceride, Natto Gum, Sodium Hyaluronate, Disodium EDTA, Centella Asiatica Extract, Glycyrrhiza Glabra (Licorice) Root Extract, Polyquaternium-51, Chlorphenesin, Tocopheryl Acetate, Carbomer, Panthenol, Arginine, Luffa Cylindrica Fruit/Leaf/Stem Extract, Beta-Glucan, Althaea Rosea Flower Extract, Aloe Barbadensis Leaf Extract, Hydroxyethylcellulose, Portulaca, Oleracea Extract, Lysine HCL, Proline, Sodium Ascorbyl Phosphate, Acetyl Methionine, Theanine, Copper Tripeptide-1.",
+
+        "filter": ["SodiumHyaluronate", "Licorice", "VitaminE", "Panthenol", 
+          "CentellaAsiaticaExtract" ]  
+    },
+    
+    {
+      "type": "Toner",
+      "name" : "Simple",
+      "subname" : "Kind To Skin Soothing Facial Toner",
+      "price" : 16.75,
+      "size" : 200,
+      "skintype": "Oily",
+      "skinconcern": ["Oiliness", "AcneScar"],
+
+      "imageURL": "simplefacialtoner.jpg", 
+      "urlpage": "https://www.watsons.com.my/soothing-facial-toner-200ml/p/BP_21858",
+
+      
+      "Brightening": [ "Niacinamide" ],
+      "AntiAging": ["Niacinamide"],
+      "PWH":["Panthenol"],
+      "AcneFighting": [""],
+
+      "allIngredient":"Aqua, hydrogenated starch hydrolysate, hamamelis virginiana water, allantoin, panthenol,niacinamide, chamomilla recutita extract, sodium pca, glycerin, pantolactone, disodium laureth sulfosuccinate, citric acid, methylparaben, 2-bromo-2-nitropropane-1,3-diol,potassium sorbate",
+
+        "filter": [ "Niacinamide", "Panthenol" ]  
+    },
+
+    {
+      "type": "Toner",
+      "name" : "CosRX",
+      "subname" : "AHA/BHA Clarifying Treatment Toner",
+      "price" : 56.00,
+      "size" : 150,
+      "skintype": "Oily",
+      "skinconcern": ["Oiliness", "AcneProne"],
+
+      "imageURL": "cosrxahabha.jpg", 
+      "urlpage": "https://www.watsons.com.my/aha-bha-clarifying-treatment-toner-150ml/p/BP_62596",
+      
+      "Brightening": [ "" ],
+      "AntiAging": ["Glycolic Acid"],
+      "PWH":["Panthenol"],
+      "AcneFighting": ["Salicylic Acid"],
+
+      "allIngredient":"Water, Salix Alba (Willow) Bark Water, Pyrus Malus (Apple) Fruit Water, Butylene Glycol, 1,2-Hexanediol, Sodium Lactate, Glycolic Acid, Betaine Salicylate, Allantoin, Panthenol, Ethyl Hexanediol.",
+        
+      "filter": [ "GlycolicAcid", "Panthenol", "SalicylicAcid" ]  
+    },
+
+    {
+      "type": "Cleanser",
+      "name" : "CosRX ",
+      "subname" : "Low-pH Good Morning Cleanser",
+      "price" : 38.99,
+      "size" : 150,
+      "skintype": "Combination",
+      "skinconcern": ["AcneProne", "Dryness"],
+
+      "imageURL": "lowphgm-cleanser.jpg", 
+      "urlpage": "https://www.watsons.com.my/low-ph-good-morning-gentle-cleanser-150ml/p/BP_62771?text=&page=0",
+
+      
+      "Brightening": [" "],
+      "AntiAging": ["Citric Acid"],
+      "PWH": [" "],
+      "AcneFighting": ["Betaine Salicylate", "Tea Tree Oil"],
+
+      "allIngredient": "Water, Cocamidopropyl Betaine, Sodium Lauroyl Methyl Isethionate, Polysorbate 20, Styrax Japonicus Branch/Fruit/Leaf Extract, Butylene Glycol, Saccharomyces Ferment, Cryptomeria Japonica Leaf Extract, Nelumbo Nucifera Leaf Extract, Pinus Palustris Leaf Extract, Ulmus Davidiana Root Extract, Oenothera Biennis (Evening Primrose) Flower Extract, Pueraria Lobata Root Extract, Melaleuca Alternifolia (Tea Tree) Leaf Oil, Allantoin, Caprylyl Glycol, Ethylhexylglycerin, Betaine Salicylate, Citric Acid, Ethyl Hexanediol, 1,2-Hexanediol, Trisodium Ethylenediamine Disuccinate, Sodium Benzoate, Disodium EDTA.",
+      
+      "filter": [ "CitricAcid", "TeaTreeOil" ] 
+    },
+
+    {
+      "type": "Cleanser",
+      "name" : "SAFI ",
+      "subname" : "Dermasafe Mild and Gentle Gel Cleanser",
+      "price" : 20.85,
+      "size" : 100,
+      "skintype": "Dry",
+      "skinconcern": ["AcneProne", "AcneScar"],
+
+      "imageURL": "cleanser.jpg", 
+      "urlpage": "https://www.watsons.com.my/dermasafe-mild-gentle-gel-cleanser-100g/p/BP_56268",
+      
+      "Brightening": ["Licorice"],
+      "AntiAging": ["Citric Acid"],
+      "PWH": [" "],
+      "AcneFighting": ["Licorice"],
+
+      "allIngredient": "Water,glycerin,sodium Lauryl Ether Sulfate, Cocamidopropyl Betaine,cocamide Methyl Mea, Acrylates Copolymer, Sodium Chloride, Sodium Cocoamphoacetate, Citric Acid, Sodium Hydroxide, Tetrasodium Edta, Butylene Glycol, Propylene Glycol, Glycyrrhiza Glabra(Licorice) Root Extract, Anthemis Nobilis(Chamomile) Flower Exctract,phenoxyethanol, Potassium Sorbate.",
+
+      "filter": [ "Licorice", "CitricAcid" ] 
+    },
+
+    {
+      "type": "Cleanser",
+      "name" : "Simple ",
+      "subname" : "Refreshing Facial Wash Gel ",
+      "price" : 18.24,
+      "size" : 150,
+      "skintype": "Combination",
+      "skinconcern": ["Oiliness", "Wrinkles"],
+
+      "imageURL": "simplerf-cleanser.jpg", 
+      "urlpage": "https://www.watsons.com.my/refreshing-facial-wash-gel-150ml/p/BP_23587?text=BP_27794%20BP_72998%20BP_65138%20BP_55897%20BP_71116%20BP_23587%20BP_21858&page=0",
+
+      
+      "Brightening": [" "],
+      "AntiAging": ["Vitamin E"],
+      "PWH": ["Panthenol"],
+      "AcneFighting": [" "],
+
+      "allIngredient": "Aqua, Cocamidopropyl Betaine, Propylene Glycol, Hydroxypropyl Methylcellulose, Panthenol, Disodium EDTA, Hydroxypropyl Cyclodextrin, Iodopropynyl Butylcarbamate, Pantolactone, Phenoxyethanol, Sodium Benzoate, Sodium Chloride, Sodium Hydroxide, Tocopheryl Acetate.",
+
+      "filter": [ "VitaminE", "Panthenol" ]
+    },
+
+    {
+      "type": "Cleanser",
+      "name" : "SOME BY MI ",
+      "subname" : "Miracle Acne Foam Cleanser",
+      "price" : 55.00,
+      "size" : 100,
+      "skintype": "Dry",
+      "skinconcern": ["Dryness", "AcneProne"],
+
+      "imageURL": "sbm30foam.jpg", 
+      "urlpage": "https://www.watsons.com.my/miracle-acne-foam-cleanser-100g/p/BP_21371",
+      
+      "Brightening": [" "],
+      "AntiAging": ["Citric Acid"],
+      "PWH": ["Madecassoside (Centella Asiatica Extract)"],
+      "AcneFighting": ["Salicylic Acid"],
+
+      "allIngredient": "Water, Glycerin, Centella Asiatica Extract, Palmitic Acid, Stearic Acid, Lauric Acid, Myristic Acid, Potassium Hydroxide, Lauryl Betaine, Butylene Glycol, PEG-100 Stearate, Glyceryl Stearate, Beeswax, Melaleuca Alternifolia (Tea Tree) Leaf Water, Sodium Methyl Cocoyl Taurate, Potassium Cocoyl Glycinate, Salicylic Acid, Dipropylene Glycol, Sodium Chloride, Hydroxyacetophenone, Mentha Piperita (Peppermint) Oil, Caprylyl Glycol, 1,2-Hexanediol, Disodium EDTA, Hydroxyethylcellulose, Calamine, Gluconolactone, Citric Acid, Dipotassium Glycyrrhizate, Artemisia Vulgaris Extract, Madecassoside, Asiaticoside, Asiatic Acid, Madecassic Acid",
+     
+      "filter": [ "CitricAcid", "CentellaAsiaticaExtract", "SalicylicAcid" ]
+    },
+
+    {
+      "type": "Cleanser",
+      "name" : "Hada Labo ",
+      "subname" : "Mild & Sensitive Face Wash",
+      "price" : 26.50,
+      "size" : 100,
+      "skintype": "Oily",
+      "skinconcern": ["Oiliness", "AcneProne"],
+
+      "imageURL": "hdmildfw.jpg", 
+      "urlpage": "https://www.watsons.com.my/mild-sensitive-face-wash-100g/p/BP_76015",
+
+      "Brightening": [" "],
+      "AntiAging": ["Citric Acid"],
+      "PWH": ["Sodium Hyaluronate"],
+      "AcneFighting": [""],
+
+      "allIngredient": "Water, Lauric Acid, Glycerin, Stearic Acid, Cocamidopropyl Betaine/Water, Potassium Hydroxide, Butylene Glycol, Palmitic Acid, Acrylates Copolymer / Water, Glycol Distearate, Polyquaternium-7, Sodium Laureth Sulfate, Cocamide DEA, Potassium Cocoyl Glycinate / Water, Stearic Acid / Disteardimonium Hectorite, Disodium EDTA, Methylisothiazolinone / Iodopropynyl Butylcarbamate / Water, Resveratrol, Sodium Hyaluronate, Sodium Acetylated Hyaluronate, Algae Extract/Sorbitol",
+     
+      "filter": [ "SodiumHyaluronate", "CitricAcid" ]
+    },
+
+
+    {
+      "type": "Moisturizer",
+      "name" : "Hada Labo ",
+      "subname" : "Super Hyaluronic Acid Hydrating Water Gel ",
+      "price" : 51.24,
+      "size" : 50,
+      "skintype": "Dry",
+      "skinconcern": ["Dryness", "Wrinkles"],
+
+      "imageURL": "hlshahwatergel.jpg", 
+      "urlpage": "https://www.watsons.com.my/search?text=hada+labo+Super+Hyaluronic+Acid+Hydrating+Water+Gel",
+
+      
+      "Brightening": ["Licorice", "Niacinamide"],
+      "AntiAging": ["Niacinamide", "Ceramide", "Adenosine"],
+      "PWH": ["Panthenol", "Sodium Hyaluronate" , "Hyaluronic Acid"],
+      "AcneFighting": ["Licorice"],
+
+      "allIngredient": [
+        "Water", "Alcohol", "Glycerin", "Niacinamide", "Butylene Glycol"
+      ],
+
+      "filter": [ "Licorice", "Niacinamide", "Ceramide", "Adenosine", 
+        "SodiumHyaluronate", "Panthenol", "HyaluronicAcid" ]
+
+    },
+
+    {
+      "type": "Moisturizer",
+      "name" : "CosRX ",
+      "subname" : "Oil Free Ultra Moisturizing Lotion ",
+      "price" : 83.00,
+      "size" : 100,
+      "skintype": "Oily",
+      "skinconcern": ["Oiliness", "AcneProne"],
+
+      "imageURL": "cosrxmoist.jpg", 
+      "urlpage": "https://www.watsons.com.my/oil-free-ultra-moisturizing-lotion-100ml/p/BP_94060",
+
+      
+      "Brightening": ["Lemon Peel Oil"],
+      "AntiAging": [""],
+      "PWH": ["Panthenol", "Sodium Hyaluronate"],
+      "AcneFighting": ["Tea Tree Oil"],
+
+      "allIngredient": "Betula Platyphylla Japonica Juice, Butylene Glycol, Glycerin, Dimethicone, Betaine, Cetearyl Alcohol, 1,2-Hexanediol, Cetearyl Olivate, Sorbitan Olivate, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Ethylhexylglycerin, Citrus Medica Limonum (Lemon) Peel Oil, Allantoin, Panthenol, Xanthan Gum, Sodium Lactate, Sodium Hyaluronate, Ethyl Hexanediol, Melaleuca Alternifolia (Tea Tree) Leaf Oil.",
+
+      "filter": ["LemonPeelOil", "Panthenol", "SodiumHyaluronate", "TeaTreeOil" ]
+
+    },
+
+    {
+      "type": "Moisturizer",
+      "name" : "Simple ",
+      "subname" : "Water Boost Hydrating Gel Cream ",
+      "price" : 25.42,
+      "size" : 50,
+      "skintype": "Dry",
+      "skinconcern": ["Wrinkles","Dryness", "Oiliness"],
+
+      "imageURL": "simplewaterboost.jpg", 
+      "urlpage": "https://www.watsons.com.my/simple-water-boost-hydrating-gel-cream%C2%A050ml/p/BP_58365",
+
+      
+      "Brightening": [" "],
+      "AntiAging": ["Citric Acid", "Lactic Acid"],
+      "PWH": [" "],
+      "AcneFighting": [" "],
+
+      "allIngredient": "Water(Aqua), Glycerin, Dimethicone, Butylene Glycol, Isohexadecane, Propylene Glycol, Ammonium Acryloyldimethyltaurate VP Copolymer, Caprylic/Capric Triglycerid, Caprylyl Glycol, Phenoxyenthanol, Tocopheryl acetate Hydrogenated Poly (C6-14 Olefin), Ammonium Acryloyldimethyltaurate/Beheneth-25 Methacrylate, Linoleamidopropyl PG-Dimonium chloride phosphate Stearic Acid, BHT, Disodium EDTA, Sodium PCA, Saccharide Isomerate, T-Butyl Alcohol, Potassium Chloride, Sodium Chloride, Citric Acid, Sodium Citrate, Sodium Benzoate, Lactic Acid.",
+      
+      "filter": ["CitricAcid" ]
+
+    },
+
+    {
+      "type": "Moisturizer",
+      "name" : "SAFI ",
+      "subname" : "Dermasafe Soothe & Hydrate Day Moisturiser ",
+      "price" : 32.05,
+      "size" : 50,
+      "skintype": "Combination",
+      "skinconcern": ["AcneScar","AcneProne"],
+
+      "imageURL": "safimoistday.jpg", 
+      "urlpage": "https://www.watsons.com.my/simple-water-boost-hydrating-gel-cream%C2%A050ml/p/BP_58365",
+
+      
+      "Brightening": ["Licorice", "Niacinamide"],
+      "AntiAging": ["Niacinamide"],
+      "PWH": ["Sodium Hyaluronate"],
+      "AcneFighting": ["Licorice"],
+
+      "allIngredient": "Water, Niacinamide, Betaine, Glycerin, Butylene Glycol, Biosaccharide Gum-1, Dimethicone, Cyclopentasiloxane, Carbomer, Cyclohexasiloxane, Trideceth-6, Bisabolol, Sodium Polyacrylate, Aminomethyl Propanol, Peg/ppg-18/18 Dimethicone, Xanthan Gum, Disodium Edta, Sodium Hyaluronate, Propylene Glycol, Zingiber Officinale (Ginger) Root Extract, Glycyrrhiza Glabra (Licorice) Root Extract, Anthemis Nobilis (Chamomile) Flower Extract, Phenoxyethanol,methylparaben.",
+      
+      "filter": ["Licorice", "Niacinamide", "LacticAcid", "SodiumHyaluronate" ]
+
+    },
+
+    {
+      "type": "Moisturizer",
+      "name" : "Klairs ",
+      "subname" : "Rich Moist Soothing Cream ",
+      "price" : 80.00,
+      "size" : 60,
+      "skintype": "Combination",
+      "skinconcern": ["Dryness","AcneProne","Wrinkles"],
+
+      "imageURL": "klairsrich.jpg", 
+      "urlpage": "https://shopee.com.my/search?keyword=rich%20moist%20soothing%20cream%20klairs",
+
+      
+      "Brightening": [" "],
+      "AntiAging": ["Ceramide", "Vitamin E", "Citric Acid"],
+      "PWH": ["Centella Asiatica Extract", "Sodium Hyaluronate"],
+      "AcneFighting": [" "],
+
+      "allIngredient": "Caprylic/Capric Triglyceride, Glycerin, Cetyl Alcohol, Cyclopentasiloxane, Glyceryl Stearate, Sodium Hyaluronate, Cetyl Ethylhexanoate, Stearic Acid, Butyrospermum Parkii (Shea Butter), Simmondsia Chinensis (Jojoba) Seed Oil, Beta-Glucan, Sorbitan Sesquioleate, Microcrystalline Wax, Betaine, Peg-100 Stearate, Ceramide 3, Polyquaternium-51, Sorbitan Stearate, Dimethicone, Tocopheryl Acetate, Carbomer, Arginine, Illicium Verum (Anise) Fruit Extract, Citrus Paradisi (Grapefruit) Fruit Extract, Nelumbium Speciosum Flower Extract, Paeonia Suffruticosa Root Extract, Scutellaria Baicalensis Root Extract, Chlorphenesin, Disodium Adenosine Triphosphate, Algin, Carica Papaya (Papaya) Fruit Extract, Citric Acid, Portulaca Oleracea Extract, Natto Gum, Centella Asiatica Extract, Althaea Rosea Flower Extract, Aloe Barbadensis Leaf Extract, Disodium Edta, Apium Graveolens (Celery) Extract, Brassica Oleracea Capitata (Cabbage) Leaf Extract, Brassica Oleracea Italica (Broccoli) Extract, Brassica Rapa (Turnip) Leaf Extract, Daucus Carota Sativa (Carrot) Root Extract, Oryza Sativa (Rice) Bran Extract, Solanum Lycopersicum (Tomato) Fruit/Leaf/Stem Extract, Lysine Hcl, Proline, Sodium Ascorbyl Phosphate, Acetyl Methionine, Theanine, Lavandula Angustifolia (Lavender) Oil, Eucalyptus Globulus Leaf Oil, Pelargonium Graveolens Flower Oil, Citrus Limon (Lemon) Peel Oil, Citrus Aurantium Dulcis (Orange) Peel Oil, Cananga Odorata Flower Oil, Citral, Geraniol, Linalool, Citronellol, Limonene",
+      
+      "filter": ["Ceramide", "VitaminE", "CitricAcid", "CentellaAsiaticaExtract", "SodiumHyaluronate" ]
+
+    },
+
+    {
+      "type": "Sunscreen",
+      "name" : "Biore ",
+      "subname" : "UV Perfect Protect Milk Moisture SPF 50+ ",
+      "price" : 18.00,
+      "size" : 25,
+      "skintype": "Combination",
+      "skinconcern": ["AcneScar","Wrinkles"],
+
+      "imageURL": "bioreuv1.jpg", 
+      "urlpage": "https://www.watsons.com.my/uv-perfect-block-milk-moisture-25ml/p/BP_66916",
+
+      
+      "Brightening": [""],
+      "AntiAging": ["Vitamin E"],
+      "PWH": [""],
+      "AcneFighting": [""],
+      "UVProtection":["Zinc Oxide", "Ethylhexyl Methoxycinnamate"],
+
+      "allIngredient": "Water, Cyclopentasiloxance, Zinc Oxide, Alcohol, Ethylhexyl methoxycinnamate, Lauryl Methacrylate/Sodium Methacrylate Crosspolymer, Dimethicone, Isopropyl Palmitate, Talc, Glycerin, PEG-32, Methicone, PEG-12 Dimethicone, Polysilicone-9, PEG-3 Dimethicone, Fragance, BHT, Tocopherol, Oryza sativa Germ Oil, Phenoxyethanol, o-Cymen-5-ol",
+      
+      "filter": ["VitaminE"]
+
+    },
+
+    {
+      "type": "Sunscreen",
+      "name" : "Biore ",
+      "subname" : "UV Aqua Rich Watery Essence SPF 50+ PA ++++ ",
+      "price" : 29.75,
+      "size" : 50,
+      "skintype": "Dry",
+      "skinconcern": ["AcneProne","Wrinkles"],
+
+      "imageURL": "bioreuv2.jpg", 
+      "urlpage": "https://www.watsons.com.my/uv-aqua-rich-watery-essence-spf-50-1-s/p/BP_39046",
+
+      
+      "Brightening": [""],
+      "AntiAging": [""],
+      "PWH": ["SodiumHyaluronate"],
+      "AcneFighting": [""],
+      "UVProtection":["Ethylhexyl Triazone", "Diethylamino Hydroxybenzoyl Hexyl Benzoate", 
+        "Ethylhexyl Methoxycinnamate", "Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine"],
+
+
+      "allIngredient": "Water (Aqua), Ethylhexyl Methoxycinnamate, Alcohol, Lauryl Methacrylate/Sodium Methacrylate Crosspolymer, Diethylamino Hydroxybenzoyl Hexyl Benzoate, Dimethicone, Xylitol, Glyceryl Stearate, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Agar, Polyvinyl Alcohol, Potassium Hydroxide, Fragrance (Parfum), Disodium EDTA, BHT, Sodium Hydroxide, Butylene Glycol, Propylene Glycol, Citrus Grandis (Grapefruit) Fruit Extract, Sodium Hyaluronate, Citrus Medica Limonum (Lemon) Fruit Extract, Citrus Aurantium Dulcis (Orange) Fruit Extract, Phenoxyethanol",
+
+      "filter": ["SodiumHyaluronate"]
+
+    },
+
+    {
+      "type": "Sunscreen",
+      "name" : "CosRX ",
+      "subname" : "Aloe Soothing Sun Cream ",
+      "price" : 56.00,
+      "size" : 50,
+      "skintype": "Dry",
+      "skinconcern": ["Dryness","Wrinkles"],
+
+      "imageURL": "cosrxsunscreen.jpg", 
+      "urlpage": "https://www.watsons.com.my/aloe-soothing-sun-cream-50ml/p/BP_62742",
+
+      
+      "Brightening": [""],
+      "AntiAging": ["Vitamin E"],
+      "PWH": [""],
+      "AcneFighting": [""],
+      "UVProtection":["Isoamyl p-Methoxycinnamate",
+      "Phenylbenzimidazole Sulfonic Acid",
+      "Ethylhexyl Methoxycinnamate",
+      "Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine",
+      "Titanium Dioxide"],
+
+      "allIngredient": "Water, Ethylhexyl Methoxycinnamate, Glycerin, Propylene Glycol, Cyclopentasiloxane, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine, Phenylbenzimidazole Sulfonic Acid, Dicaprylyl Carbonate, Isoamyl p-Methoxycinnamate, Potassium Cetyl Phospate, Alcohol, Dimethicone, Glyceryl Stearate, Butylene Glycol, Titanium Dioxide, C14-22 Alcohols, Polymethyl Methacrylate, Cetearyl Alcohol, PEG-100 Stearate, Triethanolamine, Silica, Sodium Hydroxide, C12-20 Alkyl Glucoside, Dimethicone/Vinyl Dimethicone Crosspolymer, Aluminium Hydroxide, Stearic Acis, Fragrance, Caprylyl Glycol, Phenoxyethanol, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Aloe Arborescens Leaf Extract, Dipotassium Glycyrrhizate, Carbomer, Xanthan Gum, Tocopheryl Acetate, Disodium EDTA.",
+
+      "filter": [ "VitaminE"]
+    },
+
+    {
+      "type": "Sunscreen",
+      "name" : "Hada Labo ",
+      "subname" : "Perfect UV Gel SPF50+ PA++++ ",
+      "price" : 51.77,
+      "size" : 50,
+      "skintype": "Oily",
+      "skinconcern": ["AcneProne","Wrinkles"],
+
+      "imageURL": "hdsunscreen.jpg", 
+      "urlpage": "https://www.watsons.com.my/perfect-uv-sunscreen-gel-50g/p/BP_45531",
+
+      
+      "Brightening": [""],
+      "AntiAging": ["Vitamin E"],
+      "PWH": ["Sodium Hyaluronate","Hydrolyzed Hyaluronic Acid"],
+      "AcneFighting": [""],
+      "UVProtection":[
+        "Diethylamino Hydroxybenzoyl Hexyl Benzoate",
+        "Polysilicone-15",
+        "Ethylhexyl Methoxycinnamate",
+        "Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine",
+        "Titanium Dioxide"
+      ],
+
+      "allIngredient": "Water, Ethylhexyl Methoxycinnamate, Glycerin, Propylene Glycol, Cyclopentasiloxane, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine, Phenylbenzimidazole Sulfonic Acid, Dicaprylyl Carbonate, Isoamyl p-Methoxycinnamate, Potassium Cetyl Phospate, Alcohol, Dimethicone, Glyceryl Stearate, Butylene Glycol, Titanium Dioxide, C14-22 Alcohols, Polymethyl Methacrylate, Cetearyl Alcohol, PEG-100 Stearate, Triethanolamine, Silica, Sodium Hydroxide, C12-20 Alkyl Glucoside, Dimethicone/Vinyl Dimethicone Crosspolymer, Aluminium Hydroxide, Stearic Acis, Fragrance, Caprylyl Glycol, Phenoxyethanol, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Aloe Arborescens Leaf Extract, Dipotassium Glycyrrhizate, Carbomer, Xanthan Gum, Tocopheryl Acetate, Disodium EDTA.",
+
+      "filter": [ "SodiumHyaluronate","HyaluronicAcid"]
+    },
+
+    {
+      "type": "Sunscreen",
+      "name" : "Sunplay ",
+      "subname" : "Skin Aqua UV Whitening Moisture Gel SPF50 PA++ ",
+      "price" : 30.96,
+      "size" : 80,
+      "skintype": "Combination",
+      "skinconcern": ["AcneProne","AcneScar","Wrinkles"],
+
+      "imageURL": "sunplay.jpg", 
+      "urlpage": "https://www.watsons.com.my/skin-aqua-uv-moisturizing-gel-80g/p/BP_65413",
+
+      
+      "Brightening": ["Magnesium Ascorbyl Phosphate"],
+      "AntiAging": ["Vitamin E", "Magnesium Ascorbyl Phosphate"],
+      "PWH": ["Panthenol", "Sodium Hyaluronate"],
+      "AcneFighting": [""],
+      "UVProtection":[
+        "Diethylamino Hydroxybenzoyl Hexyl Benzoate",
+        "Ethylhexyl Triazone",
+        "Ethylhexyl Methoxycinnamate",
+        "Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine"
+      ],
+
+      "allIngredient": "Water, Ethylhexyl Methoxycinnamate, Peg-400, Homosalate, Silica, Cyclopentasiloxane, Ethylhexyl Triazone, Arbutin, Diethylamino Hydroxybenzoyl Hexyl Benzoate, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer / Squalane / Polysorbate 60, Peg-20 Methyl Glucose Sesquistearate, Methylisothiazolinone / Methylparaben / Propylparaben / Phenoxyethanol, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Arginine, Disodium Edta, Dipotassium Glycyrrhizate, Sodium Hyaluronate, Caprylic/Capric Triglyceride / Laminaria Ochroleuca Extract, Polyquaternium-51, Daucus Carota Sativa (Carrot) Root Extract, Ectoin.",
+      
+      "filter": ["SodiumHyaluronate","VitaminE", "Panthenol"]
+    }
+
+  ]
+
+}
