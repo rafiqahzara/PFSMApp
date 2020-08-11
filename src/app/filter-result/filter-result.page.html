@@ -1,0 +1,192 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+			<ion-back-button text="" defaultHref="/compare"></ion-back-button>
+		  </ion-buttons>
+    <ion-title>Product of Choice</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+
+<!--
+  <ion-card  *ngFor="let item of (products | async)">
+    <ng-container  *ngFor="let d of data" lines="full" >
+      <div *ngIf="item.type === d.answer && compare_data(datarray, item.filter)">
+        <ion-card-content>
+          <p> <b>product: {{ item.name }} / {{ item.skintype }}</b></p>
+          <p> <b>answer</b> {{datarray}} </p>
+          <p> <b>filter</b> {{item.filter}} </p>
+        </ion-card-content>
+      </div>
+    </ng-container>
+
+  </ion-card>
+-->
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>
+      Filter by:
+    </ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <p style="font-size: 13px;">{{dataview}}</p>
+  </ion-card-content>
+</ion-card>
+
+ <ion-chip style="margin: 0 20px;" color="medium">
+  <ion-label> Results Found </ion-label>
+</ion-chip> 
+
+  <ion-card *ngFor="let item of (products | async)" 
+  [routerLink]="['/product-display', item.id ]">
+
+  <!--
+    typeskintype(item.skintype)
+    skinConcern(item.skinconcern)
+    compare_data(datarray, item.filter)
+        <ng-container *ngFor="let d of data" lines="full">
+
+  -->
+
+      <div *ngIf="typeskintype(item.type, item.skintype) 
+      && !skinConcern(item.skinconcern) 
+      && !compare_data(datarray, item.filter)">
+            <ion-item>
+              <ion-avatar slot="start">
+                <img class="img-circle" src=".././../assets/{{ item.imageURL }}">
+              </ion-avatar>
+              <ion-label style="white-space: inherit;">
+            
+                <ion-card-header >
+            
+                  <ion-card-subtitle>{{ item.name }} 
+                    <div class="mlbox">{{ item.size }}<br>ML</div>
+                  </ion-card-subtitle>
+            
+                  <ion-card-title style="font-size: 15px;">{{ item.subname }}</ion-card-title>
+                </ion-card-header>
+            
+              </ion-label>
+            </ion-item> 
+            
+            <ion-item>
+              <p style="font-size: 12px;"> {{ item.type }} | {{ item.skintype }} | {{ item.skinconcern }} </p>
+            </ion-item>
+            
+            <ion-card-content>
+              <p style="font-size: 12px;"><b>Brightening: </b>{{ item.Brightening }}</p>
+              <p style="font-size: 12px;"><b>Anti-Aging:</b> {{ item.AntiAging }} </p>
+              <p style="font-size: 12px;"><b>Promotes Wound Healing:</b> {{ item.PWH }} </p>
+              <p style="font-size: 12px;"><b>Acne-Fighting:</b> {{ item.AcneFighting }} </p>
+            </ion-card-content>
+      </div>
+
+  <div *ngIf="typeskintype(item.type, item.skintype) 
+  && skinConcern(item.skinconcern)
+  && !compare_data(datarray, item.filter)">
+        <ion-item>
+          <ion-avatar slot="start">
+            <img class="img-circle" src=".././../assets/{{ item.imageURL }}">
+          </ion-avatar>
+          <ion-label style="white-space: inherit;">
+        
+            <ion-card-header >
+        
+              <ion-card-subtitle>{{ item.name }} 
+                <div class="mlbox">{{ item.size }}<br>ML</div>
+              </ion-card-subtitle>
+        
+              <ion-card-title style="font-size: 15px;">{{ item.subname }}</ion-card-title>
+            </ion-card-header>
+        
+          </ion-label>
+        </ion-item> 
+        
+        <ion-item>
+          <p style="font-size: 12px;"> {{ item.type }} | {{ item.skintype }} | {{ item.skinconcern }} </p>
+        </ion-item>
+        
+        <ion-card-content>
+          <p style="font-size: 12px;"><b>Brightening: </b>{{ item.Brightening }}</p>
+          <p style="font-size: 12px;"><b>Anti-Aging:</b> {{ item.AntiAging }} </p>
+          <p style="font-size: 12px;"><b>Promotes Wound Healing:</b> {{ item.PWH }} </p>
+          <p style="font-size: 12px;"><b>Acne-Fighting:</b> {{ item.AcneFighting }} </p>
+        </ion-card-content>
+  </div>
+
+  <div *ngIf="typeskintype(item.type, item.skintype)
+  && skinConcern(item.skinconcern)
+  && compare_data(datarray, item.filter)">
+        <ion-item>
+          <ion-avatar slot="start">
+            <img class="img-circle" src=".././../assets/{{ item.imageURL }}">
+          </ion-avatar>
+          <ion-label style="white-space: inherit;">
+        
+            <ion-card-header >
+        
+              <ion-card-subtitle>{{ item.name }} 
+                <div class="mlbox">{{ item.size }}<br>ML</div>
+              </ion-card-subtitle>
+        
+              <ion-card-title style="font-size: 15px;">{{ item.subname }}</ion-card-title>
+            </ion-card-header>
+        
+          </ion-label>
+        </ion-item> 
+        
+        <ion-item>
+          <p style="font-size: 12px;"> {{ item.type }} | {{ item.skintype }} | {{ item.skinconcern }} </p>
+        </ion-item>
+        
+        <ion-card-content>
+          <p style="font-size: 12px;"><b>Brightening: </b>{{ item.Brightening }}</p>
+          <p style="font-size: 12px;"><b>Anti-Aging:</b> {{ item.AntiAging }} </p>
+          <p style="font-size: 12px;"><b>Promotes Wound Healing:</b> {{ item.PWH }} </p>
+          <p style="font-size: 12px;"><b>Acne-Fighting:</b> {{ item.AcneFighting }} </p>
+        </ion-card-content>
+  </div>
+
+  <div *ngIf="typeskintype(item.type, item.skintype)
+  && !skinConcern(item.skinconcern)
+  && compare_data(datarray, item.filter)">
+        <ion-item>
+          <ion-avatar slot="start">
+            <img class="img-circle" src=".././../assets/{{ item.imageURL }}">
+          </ion-avatar>
+          <ion-label style="white-space: inherit;">
+        
+            <ion-card-header >
+        
+              <ion-card-subtitle>{{ item.name }} 
+                <div class="mlbox">{{ item.size }}<br>ML</div>
+              </ion-card-subtitle>
+        
+              <ion-card-title style="font-size: 15px;">{{ item.subname }}</ion-card-title>
+            </ion-card-header>
+        
+          </ion-label>
+        </ion-item> 
+        
+        <ion-item>
+          <p style="font-size: 12px;"> {{ item.type }} | {{ item.skintype }} | {{ item.skinconcern }} </p>
+        </ion-item>
+        
+        <ion-card-content>
+          <p style="font-size: 12px;"><b>Brightening: </b>{{ item.Brightening }}</p>
+          <p style="font-size: 12px;"><b>Anti-Aging:</b> {{ item.AntiAging }} </p>
+          <p style="font-size: 12px;"><b>Promotes Wound Healing:</b> {{ item.PWH }} </p>
+          <p style="font-size: 12px;"><b>Acne-Fighting:</b> {{ item.AcneFighting }} </p>
+        </ion-card-content>
+  </div>
+
+  </ion-card>
+
+
+
+
+
