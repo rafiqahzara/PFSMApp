@@ -1,0 +1,31 @@
+<ion-app>
+  <ion-menu contentId="content1" side="start">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      
+      <!--<div *ngIf = "uid === null">
+      <ion-list >
+        <ion-item  routerLink="/login">Log In</ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-item  routerLink="/register">Register</ion-item>
+      </ion-list>
+      </div>!-->
+
+     <ion-list>
+        <ion-item  (click)="logout()">Log Out</ion-item>
+        <ion-item  routerLink="/landing">
+          <img src="../assets/logo-pfs.png" width="50" height="50">
+          </ion-item>
+      </ion-list>
+
+      
+
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="content1" main></ion-router-outlet>
+</ion-app>
